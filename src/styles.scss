@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		color-scheme: light;
+	}
+
+	body {
+		@apply bg-muted text-foreground font-sans antialiased;
+		min-height: 100vh;
+	}
+}
+
+.toast-top-center {
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+	top: 1.25rem !important;
+	right: auto !important;
+	width: auto !important;
+	position: fixed !important;
+	z-index: 9999 !important;
+}
+
+.toast-top-center .confirm-toast {
+	margin: 0 auto !important;
+	max-width: min(90vw, 24rem) !important;
+	position: relative !important;
+	transform: none !important;
+}
+
+/* Override any conflicting toastr styles */
+#toast-container.toast-top-center {
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+	top: 1.25rem !important;
+	right: auto !important;
+	width: auto !important;
+}
+
+#toast-container.toast-top-center > div {
+	width: auto !important;
+	margin: 0 auto !important;
+}
+
+/* Ensure proper stacking */
+.ngx-toastr {
+	z-index: 9999 !important;
+}
+
+.confirm-toast.toast {
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}

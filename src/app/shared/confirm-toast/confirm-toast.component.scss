@@ -1,0 +1,17 @@
+:host {
+  pointer-events: auto;
+  position: relative;
+  display: block;
+  z-index: 9999;
+}
+
+:host ::ng-deep button {
+  outline: none;
+}
+
+/* Ensure the toast container is properly positioned */
+:host-context(.toast-top-center) {
+  width: 100%;
+  max-width: min(90vw, 24rem);
+  margin: 0 auto;
+}
