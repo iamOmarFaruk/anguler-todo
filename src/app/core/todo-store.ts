@@ -65,7 +65,7 @@ export class TodoStore {
       dueDate: payload.dueDate || undefined,
       completed: false,
       createdAt: now,
-      updatedAt: now,
+      updatedAt: now, // Intentionally the same as createdAt for new todos
     };
 
     if (!todo.title) {

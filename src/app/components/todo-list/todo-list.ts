@@ -93,4 +93,8 @@ export class TodoList {
     this.todoStore.clearCompleted();
   }
 
+  isUpdated(todo: Todo): boolean {
+    return todo.updatedAt !== todo.createdAt;
+  }
+
 }
